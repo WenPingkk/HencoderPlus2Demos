@@ -21,7 +21,7 @@ import com.sean.hencoderplusdemo.Utils;
 /**
  * Author WenPing
  * CreateTime 2019/5/2.
- * Description:
+ * Description:PorterDuffXfermode 用法
  */
 public class AvatarView extends View {
 
