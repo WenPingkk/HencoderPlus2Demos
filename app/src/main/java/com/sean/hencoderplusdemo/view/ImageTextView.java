@@ -48,12 +48,13 @@ public class ImageTextView extends View {
         super.onDraw(canvas);
         canvas.drawBitmap(bitmap,
                 getWidth()-IMAGE_WIDTH,
-                IMAGE_OFFSET,paint);
+                IMAGE_OFFSET,
+                paint);
         //获取文字长度
         int length = text.length();
         //文字顶部,和行线的距离
         float verticalOffset = -fontMetrics.top;
-        for (int start = 0; start < length; start++) {
+        for (int start = 0; start < length;) {
             int maxWidth;
             float textTop = verticalOffset+fontMetrics.top;
             Log.e("mTag", "txtTop:"+textTop);
