@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.sean.hencoderplusdemo.view.DashBoard
+    <com.sean.hencoderplusdemo.view.PieChart
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
