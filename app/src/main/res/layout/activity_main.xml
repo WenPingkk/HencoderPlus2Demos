@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.sean.hencoderplusdemo.view.PieChart
+    <com.sean.hencoderplusdemo.view.AvatarView
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
