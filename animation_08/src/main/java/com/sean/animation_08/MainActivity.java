@@ -24,9 +24,9 @@ public class MainActivity extends AppCompatActivity {
         AnimatorSet animatorSet = new AnimatorSet();
         ObjectAnimator bottomFlip = ObjectAnimator.ofFloat(view, "bottomFlip", 45);
         bottomFlip.setDuration(1500);
-        ObjectAnimator flipRotation = ObjectAnimator.ofFloat(view, "flipRotation",  270);
+        ObjectAnimator flipRotation = ObjectAnimator.ofFloat(view, "flipRotation",  20);
         flipRotation.setDuration(1500);
-        ObjectAnimator topFlipAnimator = ObjectAnimator.ofFloat(view, "topFlip", -45);
+        ObjectAnimator topFlipAnimator = ObjectAnimator.ofFloat(view, "topFlip", 0);
         topFlipAnimator.setDuration(1500);
         animatorSet.playSequentially(bottomFlip,flipRotation,topFlipAnimator);
         animatorSet.setDuration(3000);
