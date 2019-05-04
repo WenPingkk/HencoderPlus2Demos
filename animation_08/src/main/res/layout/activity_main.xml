@@ -7,8 +7,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.sean.hencoderplusdemo.view.CameraView
+    <com.sean.animation_08.views.CircleView
+        android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
-
 </LinearLayout>
