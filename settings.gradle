@@ -1,1 +1,1 @@
-include ':app', ':animation_08'
+include ':app', ':animation_08', ':drawable_09'
