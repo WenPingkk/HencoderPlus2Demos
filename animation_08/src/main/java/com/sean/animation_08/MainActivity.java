@@ -20,16 +20,33 @@ public class MainActivity extends AppCompatActivity {
 //        circleView();
 //        camereView();
 //        keyFrameFunction();
-        pointViewFunction();
+//        pointViewFunction();
+        provinceFunction();
     }
 
-    private void pointViewFunction() {
+    private void provinceFunction() {
+        ObjectAnimator provinceObjectAnimator = ObjectAnimator.ofObject(view,"province",new ProvinceTypeEvalutor(),"澳门特别行政区");
+        provinceObjectAnimator.setStartDelay(1000);
+        provinceObjectAnimator.setDuration(6000);
+        provinceObjectAnimator.start();
+    }
+
+    class ProvinceTypeEvalutor implements TypeEvaluator<String> {
+        @Override
+        public String evaluate(float fraction, String startValue, String endValue) {
+            int index = (int) (ProvinceUtil.provinces.indexOf(startValue) +
+                    (ProvinceUtil.provinces.indexOf(endValue) - ProvinceUtil.provinces.indexOf(startValue)) * fraction);
+            return ProvinceUtil.provinces.get(index);
+        }
+    }
+
+/*    private void pointViewFunction() {
         Point point = new Point((int) Utils.dpToPixel(300), (int)Utils.dpToPixel(200));
         ObjectAnimator animator = ObjectAnimator.ofObject(view,"point",new PointEvalutor(),point);
         animator.setStartDelay(1000);
         animator.setDuration(1000);
         animator.start();
-    }
+    }*/
 
     /**
      * TypeEvaluator 用法

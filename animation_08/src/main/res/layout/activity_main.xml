@@ -20,7 +20,11 @@
         android:src="@drawable/avatar_rengwuxian"
         android:layout_width="100dp"
         android:layout_height="100dp"/>-->
-    <com.sean.animation_08.views.PointView
+<!--    <com.sean.animation_08.views.PointView
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>-->
+    <com.sean.animation_08.views.ProvinceView
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
