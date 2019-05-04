@@ -1,9 +1,9 @@
 package com.sean.animation_08;
 
 
-import android.animation.Keyframe;
 import android.animation.ObjectAnimator;
-import android.animation.PropertyValuesHolder;
+import android.animation.TypeEvaluator;
+import android.graphics.Point;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -19,7 +19,33 @@ public class MainActivity extends AppCompatActivity {
         view = findViewById(R.id.view);
 //        circleView();
 //        camereView();
-        keyFrameFunction();
+//        keyFrameFunction();
+        pointViewFunction();
+    }
+
+    private void pointViewFunction() {
+        Point point = new Point((int) Utils.dpToPixel(300), (int)Utils.dpToPixel(200));
+        ObjectAnimator animator = ObjectAnimator.ofObject(view,"point",new PointEvalutor(),point);
+        animator.setStartDelay(1000);
+        animator.setDuration(1000);
+        animator.start();
+    }
+
+    /**
+     * TypeEvaluator 用法
+     */
+    class PointEvalutor implements TypeEvaluator<Point>{
+
+        @Override
+        public Point evaluate(float fraction, Point startValue, Point endValue) {
+/*
+*             float x = startValue.x + (endValue.x - startValue.x) * fraction;
+            float y = startValue.y + (endValue.y - startValue.y) * fraction;
+            return new Point((int) x, (int) y);*/
+            float x = startValue.x + (endValue.x - startValue.x) * fraction;
+            float y = startValue.y + (endValue.y - startValue.y) * fraction;
+            return new Point((int)x, (int)y);
+        }
     }
 
     private void keyFrameFunction() {
@@ -27,7 +53,8 @@ public class MainActivity extends AppCompatActivity {
         objectAnimator.setStartDelay(1000);
         objectAnimator.setDuration(2000);
         objectAnimator.start();*/
-        float length = Utils.dpToPixel(300);
+
+/*        float length = Utils.dpToPixel(300);
         Keyframe keyframe1 = Keyframe.ofFloat(0, 0);
         Keyframe keyframe2 = Keyframe.ofFloat(0.2f, 0.2f*length);
         Keyframe keyframe3 = Keyframe.ofFloat(0.4f, 0.6f*length);
@@ -36,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         ObjectAnimator animator = ObjectAnimator.ofPropertyValuesHolder(view, propertyValuesHolder);
         animator.setStartDelay(1000);
         animator.setDuration(2000);
-        animator.start();
+        animator.start();*/
     }
 
     private void camereView() {
