@@ -1,24 +1,42 @@
 package com.sean.animation_08;
 
 
+import android.animation.Keyframe;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-
-import com.sean.animation_08.views.CameraView;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
 //    CircleView view;
-    CameraView view;
+    View view;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         view = findViewById(R.id.view);
 //        circleView();
-        camereView();
+//        camereView();
+        keyFrameFunction();
+    }
+
+    private void keyFrameFunction() {
+/*        ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(view, "translationX", Utils.dpToPixel(300));
+        objectAnimator.setStartDelay(1000);
+        objectAnimator.setDuration(2000);
+        objectAnimator.start();*/
+        float length = Utils.dpToPixel(300);
+        Keyframe keyframe1 = Keyframe.ofFloat(0, 0);
+        Keyframe keyframe2 = Keyframe.ofFloat(0.2f, 0.2f*length);
+        Keyframe keyframe3 = Keyframe.ofFloat(0.4f, 0.6f*length);
+        Keyframe keyframe4 = Keyframe.ofFloat(1, 1f*length);
+        PropertyValuesHolder propertyValuesHolder = PropertyValuesHolder.ofKeyframe("translationX", keyframe1, keyframe2, keyframe3, keyframe4);
+        ObjectAnimator animator = ObjectAnimator.ofPropertyValuesHolder(view, propertyValuesHolder);
+        animator.setStartDelay(1000);
+        animator.setDuration(2000);
+        animator.start();
     }
 
     private void camereView() {
@@ -32,13 +50,14 @@ public class MainActivity extends AppCompatActivity {
         animatorSet.playSequentially(bottomFlip,flipRotation,topFlipAnimator);
         animatorSet.setDuration(3000);
         animatorSet.start();*/
-        PropertyValuesHolder bottomFlipHolder = PropertyValuesHolder.ofFloat("bottomFlip",45);
+
+/*        PropertyValuesHolder bottomFlipHolder = PropertyValuesHolder.ofFloat("bottomFlip",45);
         PropertyValuesHolder flipRotationHolder = PropertyValuesHolder.ofFloat("flipRotation",270);
         PropertyValuesHolder topFlipHolder = PropertyValuesHolder.ofFloat("topFlip",-45);
         ObjectAnimator objectAnimator =  ObjectAnimator.ofPropertyValuesHolder(view,bottomFlipHolder, flipRotationHolder, topFlipHolder);
         objectAnimator.setStartDelay(1000);
         objectAnimator.setDuration(2000);
-        objectAnimator.start();
+        objectAnimator.start();*/
     }
 
 /*    private void circleView() {
