@@ -40,7 +40,7 @@ public class TagLayout extends ViewGroup {
         int specMode = MeasureSpec.getMode(widthMeasureSpec);
         int specWidth = MeasureSpec.getSize(widthMeasureSpec);
 
-        //进行for循环.子view的吃饭和排布.
+        //进行for循环.子view的测量和排布.
         for (int i = 0; i < getChildCount(); i++) {
             View child = getChildAt(i);
             measureChildWithMargins(child, widthMeasureSpec, 0, heightMeasureSpec, heightUsed);
