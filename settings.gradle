@@ -1,1 +1,1 @@
-include ':app', ':animation_08', ':drawable_09', ':layout_10'
+include ':app', ':animation_08', ':drawable_09', ':layout_10', ':touch_11'
