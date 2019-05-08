@@ -17,10 +17,7 @@ import java.util.concurrent.ThreadFactory;
  */
 public class Main {
     public static void main(String[] args) {
-
         executor();
-
-
     }
 
     /**
