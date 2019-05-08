@@ -60,6 +60,10 @@ public class Main {
         thread3.start();
     }
 
+    /**
+     * calllable 使用
+     * 需要 线程池
+     */
     private void callable() {
         Callable<String> callable = new Callable<String>() {
             @Override
