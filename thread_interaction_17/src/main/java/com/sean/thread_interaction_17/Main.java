@@ -8,9 +8,14 @@ package com.sean.thread_interaction_17;
 public class Main {
     public static void main(String[] args) {
 //        new CustomizableThreadDemo().runTest();
-        WaitDemo waitDemo = new WaitDemo();
+/*        WaitDemo waitDemo = new WaitDemo();
         waitDemo.runTest();
-        waitDemo.initString();
-//        waitDemo.initString();
+        waitDemo.initString();*/
+        threadInteractionDemo();
+    }
+
+    private static void threadInteractionDemo() {
+        ThreadInteractionDemo demo = new ThreadInteractionDemo();
+        demo.runTest();
     }
 }
