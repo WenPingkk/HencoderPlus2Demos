@@ -18,5 +18,4 @@ public class MainActivity extends AppCompatActivity {
         Binding.bind(this);
         mTextView.setText("Sean....");
     }
-
 }
