@@ -1,1 +1,1 @@
-include ':app', ':animation_08', ':drawable_09', ':layout_10', ':touch_11', ':scalable_12', ':multitouch_13', ':thread_16', ':thread_interaction_17', ':rxjava_18', ':io_19'
+include ':app', ':animation_08', ':drawable_09', ':layout_10', ':touch_11', ':scalable_12', ':multitouch_13', ':thread_16', ':thread_interaction_17', ':rxjava_18', ':io_19', ':28_annotationprocessing', ':28_lib_reflection'
