@@ -9,6 +9,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/28_annotationprocessing" />
+            <option value="$PROJECT_DIR$/28_lib_android" />
+            <option value="$PROJECT_DIR$/28_lib_annotation" />
+            <option value="$PROJECT_DIR$/28_lib_processor" />
             <option value="$PROJECT_DIR$/28_lib_reflection" />
             <option value="$PROJECT_DIR$/animation_08" />
             <option value="$PROJECT_DIR$/app" />

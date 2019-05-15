@@ -1,12 +1,11 @@
 package com.sean.annotationprocessing_28;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
-import com.sean.a28_lib_reflection.BindView;
-import com.sean.a28_lib_reflection.Binding;
-
+import com.sean.a28_annotation.BindView;
+import com.sean.a28_lib_android.Binding;
 
 public class MainActivity extends AppCompatActivity {
 
